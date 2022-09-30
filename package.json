@@ -4,10 +4,11 @@
   "description": "This is HTML/CSS/JS project of Todo List",
   "main": "index.js",
   "dependencies": {
-    "webpack": "^5.74.0",
+    "webpack": "^5.74.0"
+  },
+  "devDependencies": {
     "webpack-cli": "^4.10.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

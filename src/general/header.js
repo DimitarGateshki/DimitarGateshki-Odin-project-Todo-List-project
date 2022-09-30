@@ -28,20 +28,17 @@ function sidebarGenerator(className){
 
     sidebar.classList.add(className);
 
+
+    const nav=sidebarElGenerator('button-open-nav', ' ');
     const inbox=sidebarElGenerator('inbox', 'inbox');
     const today=sidebarElGenerator('today', 'Today');
     const thisWeek=sidebarElGenerator('thisWeek', 'This Week');
 
-    const project=document.createElement('h2');
-    project.classList.add('projectsTitle');
-
-    const addProject=sidebarElGenerator('addProject','Add Project');
 
     sidebar.appendChild(inbox);
     sidebar.appendChild(today);
     sidebar.appendChild(thisWeek);
-    sidebar.appendChild(project);
-    sidebar.appendChild(addProject);
+    
 
     return sidebar;
 }
@@ -76,7 +73,7 @@ function onLoad(){
     const footer=footerGenerator('footer','Copyright © 2022 DimitarGateshki');
 
     content.appendChild(header);
-    content.appendChild(sidebar);
+    main.appendChild(sidebar);
     content.appendChild(main);
     content.appendChild(footer);
 }
