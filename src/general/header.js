@@ -26,19 +26,7 @@ function sidebarElGenerator(className,text){
 function sidebarGenerator(className){
     const sidebar=document.createElement('div');
 
-    sidebar.classList.add(className);
-
-
-    const nav=sidebarElGenerator('button-open-nav', ' ');
-    const inbox=sidebarElGenerator('inbox', 'inbox');
-    const today=sidebarElGenerator('today', 'Today');
-    const thisWeek=sidebarElGenerator('thisWeek', 'This Week');
-
-
-    sidebar.appendChild(inbox);
-    sidebar.appendChild(today);
-    sidebar.appendChild(thisWeek);
-    
+    sidebar.classList.add(className);    
 
     return sidebar;
 }
