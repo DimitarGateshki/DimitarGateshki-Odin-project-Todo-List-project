@@ -1,14 +1,14 @@
-import {addModal , loadPopUp}  from "./general/addProject";
+import loadPopUp  from "./general/addProject";
 
 
 function init(){
-    
+    addProjectAction();
 }
 
-/*function addProjectAction(){
-    const addProject=document.getElementsByClassName('addProject')[0];
-    addProject.addEventListener('click',loadPopUp);
+function addProjectAction(){
+    const addProject=document.getElementsByClassName('tab')[0];
+    addProject.onclick=loadPopUp;
 
-}*/
+}
 
 init();

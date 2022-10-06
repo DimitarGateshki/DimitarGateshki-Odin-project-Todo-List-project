@@ -1,0 +1,1 @@
+(()=>{"use strict";document.getElementsByClassName("tab")[0].onclick=function(){document.getElementsByClassName("modal")[0].classList.add("active")}})();

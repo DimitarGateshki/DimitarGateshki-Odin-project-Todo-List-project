@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    
     <div class="container" id="container">
         <header class="header">
             <h1>ToDo List</h1>
@@ -29,6 +28,20 @@
         <h3>Copyright © 2022 DimitarGateshki</h3>
     </footer>
 </div>
+
+<div class="modal" id="addProjectModal">
+    <form class="addProjectForm" id="addProjectForm">
+        <input class="input" type="text" id="title" placeholder="Title" recuired maxlength="100">
+        <p class="error" id="error"></p>
+        <input class="input" type="text" id="description" placeholder="Description" recuired maxlength="100">
+        
+        <button class="btn btnSubmit" type="submit">Add the project</button>
+    </form>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<script src="main.js"></script>
+
     
 
 </body>

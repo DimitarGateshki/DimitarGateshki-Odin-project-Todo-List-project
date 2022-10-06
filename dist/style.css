@@ -118,3 +118,30 @@ input{
 .modal.active{
   transform: translate(-50%, -50%) scale(1);
 }
+
+.addProjectForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.addProjectForm button{
+  width: 100%;
+}
+
+.error{
+  display: none;
+  color: #eb3434;
+}
+
+.error.active{
+  display: block;
+  margin-top: -15px;
+}
+
+.input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+}
