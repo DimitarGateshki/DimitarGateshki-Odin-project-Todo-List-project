@@ -1,3 +1,4 @@
+
 class Project{
     constructor(name,description){
     this.name=name;
@@ -17,11 +18,13 @@ class Project{
     };
 
 
-    createElement(){
+    createElement(n){
         let main=document.getElementsByClassName('main')[0];
 
         let project=document.createElement('div');
         project.classList.add('project');
+        project.setAttribute('id',this.name);
+
 
         let title=document.createElement('h3');
         title.classList.add('projectTitle');
@@ -30,19 +33,29 @@ class Project{
         let description=document.createElement('p');
         description.classList.add('projectDescription');
         description.textContent=this.description;
+    
+        let button=document.createElement('button');
+        button.textContent='Add task';
+        button.classList.add('addProjectBtn');
 
-        let tasks=document.createElement('ul');
-        tasks.classList.add('tasks');
+        button.addEventListener('click',()=>{
+            document.getElementsByClassName('modal')[1].classList.add('active');
+            document.getElementsByClassName('currentProjectName')[0].textContent=this.name;
+        });
 
         project.appendChild(title);
         project.appendChild(description);
-        project.appendChild(tasks);
+        project.appendChild(button);
 
         main.appendChild(project);
+        document.getElementsByClassName('modal')[0].classList.remove('active');
+
     }
     
 
 }
+
+
 
 class Task{
 

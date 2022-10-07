@@ -4,14 +4,16 @@ import  Project  from "./projectController";
 
 
 function buildProject(){
-    let title= document.getElementById('title').value;
-    let description=document.getElementById('description').value;
+    let title= document.getElementById('title');
+    let description=document.getElementById('description');
 
-    let project=new Project(title,description);
-    project.createElement();
-    
+    let project=new Project(title.value,description.value);
 
-    
+   project.createElement(title.value);
+
+   title.value="";
+   description.value="";
+
 }
 
 
@@ -22,4 +24,4 @@ function loadPopUp(){
 }
 
 
-export default loadPopUp;
+export { loadPopUp, buildProject};

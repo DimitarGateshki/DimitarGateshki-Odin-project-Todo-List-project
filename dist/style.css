@@ -27,7 +27,8 @@ body{
 }
 
 button,
-input{
+input,
+.btn{
     border: none;
     color: inherit;
     font-family: inherit;
@@ -35,11 +36,18 @@ input{
     outline: none;
 }
 
-button{
+button,
+.btn{
     width: 100%;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.btn{
+  background-color: var(--menu-color);
+  color: var(--acc2-color);
+  font-size: 1.2rem;
 }
 
 input{
@@ -87,8 +95,51 @@ input{
   grid-column: 2;
   grid-row: 2/3;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(2,1fr);
   justify-content: center;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.project{
+  background-color: var(--acc1-color);
+  padding: 10px;
+  color: var(--white-color);
+  height: fit-content;
+  box-shadow: var(--shadow);
+  margin: 5px;
+}
+
+.project h3{
+  font-size: 3rem;
+  text-align: center;
+}
+
+.project p{
+  font-size: 1.5rem;
+  text-align: center;
+
+}
+
+
+
+.taskEl{
+background-color: var(--menu-color);
+padding: 20px;
+font-size: 1.5rem;
+margin: 3px 0;
+border-radius: 25px;
+}
+
+.currentProjectName{
+  font-size: 2rem;
+  color: var(--acc2-color);
+}
+
+.addProjectBtn{
+  color: var(--header-footer-color);
+  font-size: 1.7rem;
+  margin: 10px 0 ;
 }
 
 .footer{
@@ -109,7 +160,7 @@ input{
   width: 300px;
   padding: 2%;
   border-radius: 20px;
-  background-color: var(--headerColor);
+  background-color: var(--header-footer-color);
   text-align: center;
   transform:  translate(-50%, -50%) scale(0);
   transition: 0.2s ease-in-out;
@@ -120,6 +171,8 @@ input{
 }
 
 .addProjectForm{
+  padding: 20px;
+  background-color: var(--header-footer-color);
   display: flex;
   flex-direction: column;
   align-items: center;
